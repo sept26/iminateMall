@@ -5,7 +5,7 @@ const state = {
   fetchLoading: false // 全局加载状态loading
 }
 
-const mutaions = {
+const mutations = {
   [types.SET_LOADING] (state, res) {
     state.fetchLoading = res
   }
@@ -18,5 +18,5 @@ const actions = {
 export default {
   state,
   actions,
-  mutaions
+  mutations
 }

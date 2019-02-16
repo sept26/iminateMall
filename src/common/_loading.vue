@@ -23,14 +23,16 @@ export default {
   z-index: 999;
 }
 .loading-remind {
-  font-size: 24px;
+  font-size: 20px;
   text-align: center;
+  position: relative;
+  top: 42%;
 }
 .spinner {
   position: relative;
   width: 50px;
   height: 50px;
-  top: 50%;
+  top: 40%;
   left: 50%;
   transform: translateX(-25px);
 }
