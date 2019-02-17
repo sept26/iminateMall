@@ -8,6 +8,7 @@
     <msection3 :list="datas.section3.list" :banner="datas.section3.banner"></msection3>
     <msection4 :list="datas.section4.list" :banner="datas.section4.banner"></msection4>
     <mbaseline></mbaseline>
+    <mfooter></mfooter>
   </div>
 </template>
 <script>
@@ -19,6 +20,7 @@ import Msection2 from '@/components/index/section2'
 import Msection3 from '@/components/index/section3'
 import Msection4 from '@/components/index/section4'
 import Mbaseline from '@/common/_baseline'
+import Mfooter from '@/common/_footer'
 import '@/http/mock' // 模拟数据
 export default {
   data () {
@@ -40,7 +42,8 @@ export default {
     Msection2,
     Msection3,
     Msection4,
-    Mbaseline
+    Mbaseline,
+    Mfooter
   },
   beforeCreate () {
     this.$api({

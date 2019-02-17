@@ -9,6 +9,7 @@ export default {
 <style lang='less' scoped>
 div {
   padding: 8vw 0;
+  padding-bottom: 20vw;
   text-align: center;
   letter-spacing: .2vw;
   color: rgb(158, 158, 158);
