@@ -1,12 +1,13 @@
 <template>
   <div class="category">
-    <cheader>
+    <cheader class="header-title">
       <h1 class="header-title" slot="title">商品分类</h1>
     </cheader>
     <section class="view">
       <caside class="c-aside" :datas="allData.aside"></caside>
-      <div></div>
-      <router-view :datas="allData.aside"></router-view>
+      <div class="router-view">
+        <router-view :datas="allData.aside"></router-view>
+      </div>
     </section>
   </div>
 </template>
@@ -40,21 +41,32 @@ export default {
 .header-title{
   font-size: 5vw;
   text-align: center;
+  line-height: 6vh;
 }
 .category {
   display: flex;
   width: 100%;
   height: 100%;
-  flex-direction: column;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: column nowrap;
+  flex-flow: column nowrap;
+  .header-title {
+    height: 6vh;
+  }
   .view {
     display: flex;
     width: 100%;
-    height: 100%;
+    height: 94vh;
     .c-aside {
       flex: 2;
     }
-    div {
+    .router-view {
       flex: 8;
+      height: 100%;
+      overflow-y: auto;
+      &::-webkit-scrollbar{display: none}
     }
   }
 }

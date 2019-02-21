@@ -1,6 +1,6 @@
 <template>
   <header class="header">
-    <router-link class="icon-go" :to="{name: '首页'}" v-if="$router.path === '/category'"></router-link>
+    <router-link class="icon-go" :to="{name: '首页'}" v-if="$route.matched[0].path === '/category'"></router-link>
     <i v-else class="icon-go" @click="$router.go(-1)"></i>
     <slot name="title"></slot>
   </header>
@@ -17,7 +17,7 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 12vw;
+  height: 100%;
   background-color: #F8FCFF;
   padding: 0 4vw;
   h1 {

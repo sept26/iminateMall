@@ -2,7 +2,7 @@
   <section class="category-aside">
     <ul>
       <li v-for="(item, index) in datas" :key="item.id" @click="changeTabIndex(index)">
-        <router-link :to="{path:`category${item.title}`}" :class="{active:index== tabIndex}">{{item.title}}</router-link>
+        <router-link :to="{path:`/category/${item.title}`}" :class="{active:index== tabIndex}">{{item.title}}</router-link>
       </li>
     </ul>
   </section>
@@ -33,14 +33,17 @@ export default {
   flex: 2;
   height: 100%;
   background:gold;
-  overflow-y: auto;
   -webkit-overflow-scrolling: touch;
   &::-webkit-scrollbar{display: none}
-  ul {
+  > ul {
     width: 100%;
-    // height: 100%;
+    height: 100%;
+    overflow-y: auto;
+    background-color: #fff;
+    &::-webkit-scrollbar{display: none}
     li {
       text-align: center;
+      background-color: #fff;
       a {
         display: block;
         padding: 4vw 0;
