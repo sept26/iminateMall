@@ -18,7 +18,7 @@ router.beforeEach((to, from, next) => {
     if (store.state.login.token) { // 有权限的话,进入路由
       next()
     } else { // 否则跳到登录页
-      next({paht: 'login'})
+      next({path: 'login'})
     }
   } else { // 不需要权限的,直接路由跳转
     next()
